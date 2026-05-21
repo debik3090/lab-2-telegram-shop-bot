@@ -1,4 +1,11 @@
 <?php
+
+$env = parse_ini_file('.env');
+
+foreach ($env as $key => $value) {
+    $_ENV[$key] = $value;
+}
+
 $config = require __DIR__ . '/config.php';
 require __DIR__ . '/db.php';
 
